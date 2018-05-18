@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
+      <link rel="stylesheet" href="static/styles/team.css">
+      <link rel="stylesheet" href="static/styles/howto.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="static/jquery.js"></script>
+  </head>
+  <body>
+    <div class="ui one column center aligned grid">
+      <div class="sixteen wide centered column">
+        <div class="ui huge inverted menu navbar">
+          <a class="item">JacksBot<a>
+          <div class="right menu">
+            <a href="/" class="item">Home</a>
+            <a href="/team" class="item">Team</a>
+            <a href="{{ url_for('logout') }}" class="item">Logout</a>
+          </div>
+        </div>
+      </div>
+      <div class="eight wide centered column">
+        <h1 class="ui header" style="font-size: 50px; padding-top: 5%;">Welcome to the dashboard!</h1>
+      </div>
+      <div class="column">
+        <h2>Number of Retweets</h2>
+        <h1>XD</h1>
+      </div>
+      <p class="column" style="font-size: 20px;">Input the desired keywords and click submit</p>
+      <div class="one column center aligned row">
+        <div class=" four wide column">
+          <form class="ui form" action="/dashboard" method="post">
+            <input type="text" name="keyword" placeholder="ex: sports, food">
+            <button class="ui button" type="submit" style="margin-top: 20px; background-color: #66c7f4">Submit</button>
+          </form>
+        </div>
+        
+      </div>
+      <div class="center aligned column" style="padding-top: 5%;">
+        <p class="column" id="stopmsg">Would you like to give the bot a rest?</p>
+        <button class="ui red green button" id="stopbtn">Stop!</button>
+      </div>
+      <div class="center aligned column" class="popup" onmouseover="vis()" onmouseleave="vis()"><span class="title">Instructions</span>
+        <span class="popuptext" id="instructions">To use JacksBot, type in the keywords you want to use to retweet, and click the "submit" button.</p><p>
+        You can see your current status with our service in your Dashboard screen.  To activate or deactivate our service, you may click on the "Activate/Deactivate" button to toggle the activation status of our service.
+        </span>
+      </di>
+    </div>
+    <footer>
+        <script>
+        function vis() {
+            var inst = document.getElementById("instructions");
+            inst.classList.toggle("show");
+        }
+        </script>
+    </footer>
+  </body>
+</html>

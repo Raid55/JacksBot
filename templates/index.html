@@ -1,17 +1,81 @@
 <html>
-    <head>
-        <title>lol</title>
-    </head>
-    <body>
-        <h2>Flask Login App</h2>
-        {% if session['screen_name'] %}
-            Hello {{ session['screen_name'] }}!  
-        {% else %}
-        <p>
-            Sign in with twitter.
-        <p>
-        <a href="{{ url_for('login') }}"><img src="{{
-            url_for('static', filename='sign-in-with-twitter-gray.png') }}" alt="sign in"></a>
-        {% endif %}
-    </body>
+
+<head>
+  <!-- Site Properties -->
+  <title>JacksBot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
+
+  <style type="text/css">
+    .masthead.segment {
+      min-height: 70%;
+      padding: 1em 0em;
+    }
+
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    body {
+      background-color: #66c7f4;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Page Contents -->
+  <div>
+    <div class="ui inverted vertical masthead center aligned segment">
+
+      <div class="ui container">
+        <div class="ui large secondary inverted pointing menu">
+          <a href="/" class="active item">Home</a>
+          <a href="/team" class="item">Team</a>
+          <a class="item" href="https://github.com/Raid55/JacksBot">Github</a>
+          <div class="right item">
+            <a href="{{ url_for('login') }}" class="ui inverted button">Log in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui text container">
+        <h1 class="ui inverted header">
+          JacksBot
+        </h1>
+        <h2 style="color: #ff1053;">Boost your twitter whenever, wherever.</h2>
+        <a href="{{ url_for('login') }}"><div class="ui huge button" style="background-color: #66c7f4;">Get Started
+          <i class="right arrow icon"></i>
+        </div></a>
+      </div>
+
+    </div>
+    <div class="ui text container" style="padding: 20px; color: white;">
+      <p class="ui inverted segment" style="font-size: 20px;">
+        Are you down on twitter followers? Well we got the application for you! Using our new and improved secret algorithm you can
+        get tons of follows is such little time. Try it out now for only 12.99 a minute or with a single payment of half
+        a bitcoin. THINK OF THE SAVINGS!! This is a limited time offer so don't miss out. ORDER NOW!
+      </p>
+    </div>
+  </div>
+
+</body>
+
 </html>
