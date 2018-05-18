@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#stopbtn").click(function() {
-        if ($("stopbtn").attr("class") === "ui red green button") {
+        if ($(this).hasClass("ui red green button")) {
             $.post("/dashboard", "0");
         } else {
             $.post("/dashboard", "1");
