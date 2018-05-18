@@ -5,13 +5,13 @@ A service that gets users more followers by targeting tweets containing a specif
 ## Stack
 
 Our technology stack used to make this website:
-Ngnix
-Python
-SQLite
-Flask
-Semantic UI
-HTML
-CSS
+* Ngnix
+* Python
+* SQLite
+* Flask
+* Semantic UI
+* HTML
+* CSS
 
 ## Installation
 
