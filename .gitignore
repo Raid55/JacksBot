@@ -10,6 +10,7 @@ __pycache__/
 .env
 
 # Distribution / packaging
+JacksBotEnv/
 .Python
 build/
 develop-eggs/
