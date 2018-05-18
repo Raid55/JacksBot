@@ -3,7 +3,8 @@
 '''
 from sched import scheduler
 import time
-from models.storage import DBStorage
+from models.storage import DBStorag
+from models.tweep_methods import search_tweets
 
 
 # Open Database
