@@ -8,7 +8,7 @@ from flask import Flask, request, jsonify, redirect, url_for, abort, session, g,
 from flask_oauth import OAuth
 
 # configuration
-SECRET_KEY = 'keyboard cat'
+SECRET_KEY = 'development key'
 DEBUG = True
 host = '0.0.0.0'
 port = 5000
@@ -51,6 +51,8 @@ def index():
 
 @app.route('/login')
 def login():
+    print(url_for('auth',
+        next=request.args.get('next') or request.referrer or None))
     return twitter.authorize(callback=url_for('auth',
         next=request.args.get('next') or request.referrer or None))
 
