@@ -56,6 +56,15 @@ def login():
     return twitter.authorize(callback=url_for('auth',
         next=request.args.get('next') or request.referrer or None))
 
+@app.route('/dashboard', methods=['GET'])
+def get_dashboard():
+    return render_template('dashboard.html')
+
+# @app.route('/dashboard', methods=['POST'])
+# def post_dashboard():
+    # tmp = request.form["keywords"]
+    # tmp = request.form["active"]
+
 @app.route('/logout')
 def logout():
     session.pop('screen_name', None)
