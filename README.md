@@ -41,13 +41,13 @@ This product is the embodiment of perfection, so there are no bugs.
 
 | Role | Name | GitHub | Twitter | LinkedIn |
 | ---- | ---- | ------ | ------- | -------- |
-| CEO | Sue Kalia | (vkalia602)[https://github.com/vkalia602] | (@fallenicicle)[https://twitter.com/fallenicicle] | |
-| Product Manager | Jacob Biehler | (biehlerj)[https://github.com/biehlerj] | (@Biehlerj)[https://twitter.com/Biehlerj] | (Jacob Biehler)[https://www.linkedin.com/in/jacob-biehler-475573139/] |
-| Front-end | Sid Carroll | (squidcarroll)[https://github.com/squidcarroll] | (@sidCarroll7)[https://twitter.com/sidCarroll7] | |
-| Front-end | Henry Hsu | (henryh28)[https://github.com/henryh28] | (@Verdomo_Vis)[https://twitter.com/Verdomde_Vis] | |
-| Full Stack | David Yoon | (daveyoon64)[https://github.com/daveyoon64] | (@daveyoon64)[https://twitter.com/daveyoon64] | |
-| Full Stack | Nicholas Boutboul | (Raid55)[https://githhub.com/Raid55] | (@_Raid55)[https://twitter.com/_Raid55] | |
-| Full Stack | Jesse Hedden | (jagrvargen)[https://github.com/jagrvargen] | (@jagarvargen)[https://github.com/jagrvargen] | |
-| Full Stack | Lee Gaines | (eightlimbed)[https://github.com/eightlimbed] | (@eightlimbed)[https://twitter.com/eightlimbed] | |
-| Backend | James Choi | (imperfectskillz)[https://github.com/imperfectskillz] | (@choiejam)[https://twitter.com/choiejam] | |
-| Marketing | James Heck | (notjamesheck)[https://github.com/notjamesheck] | (@notjamesheck)[https://twitter.com/notjamesheck] | |
+| CEO | Sue Kalia | [vkalia602](https://github.com/vkalia602) | [@fallenicicle](https://twitter.com/fallenicicle) | |
+| Product Manager | Jacob Biehler | [biehlerj](https://github.com/biehlerj) | [@Biehlerj](https://twitter.com/Biehlerj) | [Jacob Biehler](https://www.linkedin.com/in/jacob-biehler-475573139/) |
+| Front-end | Sid Carroll | [squidcarroll](https://github.com/squidcarroll) | [@sidCarroll7](https://twitter.com/sidCarroll7) | |
+| Front-end | Henry Hsu | [henryh28](https://github.com/henryh28) | [@Verdomo_Vis](https://twitter.com/Verdomde_Vis) | |
+| Full Stack | David Yoon | [daveyoon64](https://github.com/daveyoon64) | [@daveyoon64](https://twitter.com/daveyoon64) | |
+| Full Stack | Nicholas Boutboul | [Raid55](https://githhub.com/Raid55) | [@_Raid55](https://twitter.com/_Raid55) | |
+| Full Stack | Jesse Hedden | [jagrvargen](https://github.com/jagrvargen) | [@jagarvargen](https://github.com/jagrvargen) | |
+| Full Stack | Lee Gaines | [eightlimbed](https://github.com/eightlimbed) | [@eightlimbed](https://twitter.com/eightlimbed) | |
+| Backend | James Choi | [imperfectskillz](https://github.com/imperfectskillz) | [@choiejam](https://twitter.com/choiejam) | |
+| Marketing | James Heck | [notjamesheck](https://github.com/notjamesheck) | [@notjamesheck](https://twitter.com/notjamesheck) | |
