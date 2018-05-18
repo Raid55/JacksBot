@@ -13,9 +13,9 @@
         <div class="ui huge inverted menu navbar">
           <a class="item">JacksBot<a>
           <div class="right menu">
-            <a href="" class="active item">Home</a>
-            <a href="" class="right item">Team</a>
-            <a href="" class="right item">Login</a>
+            <a href="/" class="item">Home</a>
+            <a href="/team" class="item">Team</a>
+            <a href="{{ url_for('logout') }}" class="item">Logout</a>
           </div>
         </div>
       </div>
@@ -29,10 +29,10 @@
       <p class="column" style="font-size: 20px;">Input the desired hashtag and click go</p>
       <div class="one column center aligned row">
         <div class=" four wide column">
-          <div class="ui form">
+          <form class="ui form" action="/dashboard" method="post">
             <input type="text" name="keyword" placeholder="hashtag">
-          </div>
-          <button class="ui button" style="margin-top: 20px; background-color: #66c7f4">Submit</button>
+            <button class="ui button" type="submit" style="margin-top: 20px; background-color: #66c7f4">Submit</button>
+          </form>
         </div>
         
       </div>
