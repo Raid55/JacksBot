@@ -2,7 +2,7 @@
 '''
 Module for API for website majoidea.holberton.us
 '''
-
+import os
 from flask_oauth import OAuth
 from flask import Flask, request, jsonify, redirect, url_for, abort, session, g, flash, render_template, make_response
 from flask_oauth import OAuth
@@ -27,9 +27,10 @@ twitter = oauth.remote_app('twitter',
     access_token_url='https://api.twitter.com/oauth/access_token',
     authorize_url='https://api.twitter.com/oauth/authenticate',
 
+
     consumer_key='WRi2oHuGFml3AHUH9J5FDCAws',
     consumer_secret='fpLdAvU8PejMPWPkCyMrztj5npiQwNBq4q0pEsFwcGNT7OY8FN'
-)
+
  
 
 @twitter.tokengetter
@@ -65,9 +66,10 @@ def post_dashboard():
     if session['access_token'] is None:
          return redirect(url_for('index'))
 
-    print(request.form)
-    return None
-    # tmp = request.form["keywords"]
+    # print(request.json())
+    # keywords = request.form["keyword"]
+
+    return redirect(url_for('get_dashboard'))
     # tmp = request.form["active"]
 
 @app.route('/team', methods=['GET'])

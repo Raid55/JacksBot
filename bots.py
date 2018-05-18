@@ -23,4 +23,4 @@ while True:
             search_tweets(user.get('access_token_key'), user.get('access_token_secret'), user.get('keywords'))
     except tweepy.error.TweepError:
         pass
-    time.sleep(10)
+    time.sleep(69)
