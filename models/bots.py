@@ -3,7 +3,7 @@
 '''
 from sched import scheduler
 import time
-from models.storage import DBStorag
+from models.storage import DBStorage
 from models.tweep_methods import search_tweets
 
 
@@ -11,10 +11,9 @@ from models.tweep_methods import search_tweets
 db = DBStorage()
 db.reload()
 
-# Set scheduler to query user data and send tweets
-schedule = scheduler(time.time, time.sleep)
-schedule.enter(3600, 1, main_entry)
-schedule.run()
+while True:
+    main_entry()
+    time.sleep(3600)
     
 def main_entry():
     ''' Initiates everything based on timer '''
