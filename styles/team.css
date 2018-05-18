@@ -1,0 +1,26 @@
+.team {
+  font-family: Arial;
+  font-size: 30px;
+  position: relative;
+  top: 10%;
+  text-align: center;
+}
+
+#team_list li {
+  text-align: left;
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 50px;
+}
+
+.team_text {
+  font-size: 24px;
+
+}
+
+img {
+  border-radius: 10%;
+  border: 1px solid;
+  height: 250px;
+  width: 250px;
+}
