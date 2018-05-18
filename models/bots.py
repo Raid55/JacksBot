@@ -21,8 +21,7 @@ def main_entry():
     users = db.query_active_users()
 
     for user in users:
-        keywords = user.keywords.replace('|', ' ').split()
-        search_tweets(user.access_token_key, user.access_token_secret, keywords)
+        search_tweets(user.access_token_key, user.access_token_secret, user.keywords)
 
     db.close()
 
