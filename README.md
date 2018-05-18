@@ -2,26 +2,16 @@
 
 A service that gets users more followers by targeting tweets containing a specific keyword and retweets them.
 
-## Environment
+## Stack
 
-### Backend Environment
-
-`To be completed during final team meeting`
-
-### Frontend Environment
-
-`To be completed during final team meeting`
-
-### SRE
-
-`To be completed during final team meeting`
-
-## Repository Contents
-
-### Files and Description
-
-`Update during checkpoints`
-This repository was hosted at `jacksmelt.holberton.us`
+Our technology stack used to make this website:
+Ngnix
+Python
+SQLite
+Flask
+Semantic UI
+HTML
+CSS
 
 ## Installation
 
