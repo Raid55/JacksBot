@@ -2,7 +2,7 @@
 '''
 Module for API for website majoidea.holberton.us
 '''
-
+import os
 from flask_oauth import OAuth
 from flask import Flask, request, jsonify, redirect, url_for, abort, session, g, flash, render_template, make_response
 from flask_oauth import OAuth
@@ -26,8 +26,8 @@ twitter = oauth.remote_app('twitter',
     access_token_url='https://api.twitter.com/oauth/access_token',
     authorize_url='https://api.twitter.com/oauth/authenticate',
 
-    consumer_key='???',
-    consumer_secret='???'
+    consumer_key=os.getenv('KEY'),
+    consumer_secret=os.getenv('SECRET')
 )
  
 
