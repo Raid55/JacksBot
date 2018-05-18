@@ -51,7 +51,7 @@
           <a href="/team" class="item">Team</a>
           <a class="item" href="https://github.com/Raid55/JacksBot">Github</a>
           <div class="right item">
-            <a href="/login" class="ui inverted button">Log in</a>
+            <a href="{{ url_for('login') }}" class="ui inverted button">Log in</a>
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@
           JacksBot
         </h1>
         <h2 style="color: #ff1053;">Boost your twitter whenever, wherever.</h2>
-        <a><div class="ui huge button" style="background-color: #66c7f4;">Get Started
+        <a href="{{ url_for('login') }}"><div class="ui huge button" style="background-color: #66c7f4;">Get Started
           <i class="right arrow icon"></i>
         </div></a>
       </div>
