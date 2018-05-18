@@ -3,6 +3,7 @@
   <head>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
       <link rel="stylesheet" href="static/styles/team.css">
+      <link rel="stylesheet" href="static/styles/howto.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="static/jquery.js"></script>
@@ -40,6 +41,19 @@
         <p class="column" id="stopmsg">Would you like to give the bot a rest?</p>
         <button class="ui red green button" id="stopbtn">Stop!</button>
       </div>
+      <div class="center aligned column" class="popup" onmouseover="vis()" onmouseleave="vis()"><span class="title">Instructions</span>
+        <span class="popuptext" id="instructions">To use JacksBot, type in the keywords you want to use to retweet, and click the "submit" button.</p><p>
+        You can see your current status with our service in your Dashboard screen.  To activate or deactivate our service, you may click on the "Activate/Deactivate" button to toggle the activation status of our service.
+        </span>
+      </di>
     </div>
+    <footer>
+        <script>
+        function vis() {
+            var inst = document.getElementById("instructions");
+            inst.classList.toggle("show");
+        }
+        </script>
+    </footer>
   </body>
 </html>

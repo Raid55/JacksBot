@@ -1,0 +1,57 @@
+#instructions {
+    font-family: Trebuchet;
+    font-size: 20px;
+    border: 20px;
+  }
+  
+  .popup {
+      position: absolute;
+      background-color: #0099ff;
+      text-align: center;
+      color: white;
+      height: 35px;
+      width: 200px;
+      font-size: 25px;
+      border-radius: 10px;
+      left: 45%;
+      bottom: 5%;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+  }
+  
+  .title {
+    vertical-align: middle;
+  }
+  
+  .popuptext {
+      visibility: hidden;
+      text-align: left;
+      width: 900px;
+      margin-left: -10%;
+      background-color: #3396ff;
+      color: #ffffe6;
+      border-radius: 5px;
+      padding: 15px 0;
+      position: fixed;
+      left: 30%;
+      z-index: 1;
+      bottom: 85px;
+  }
+  
+  .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+  }
+  
+  @-webkit-keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+  }
