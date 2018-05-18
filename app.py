@@ -65,9 +65,10 @@ def post_dashboard():
     if session['access_token'] is None:
          return redirect(url_for('index'))
 
-    print(request.form)
-    return None
-    # tmp = request.form["keywords"]
+    # print(request.json())
+    # keywords = request.form["keyword"]
+
+    return redirect(url_for('get_dashboard'))
     # tmp = request.form["active"]
 
 @app.route('/team', methods=['GET'])
