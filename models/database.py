@@ -35,7 +35,6 @@ class DBStorage:
         )]
         if res:
             return [{
-                'id': u.id,
 		        'twit_user_name': u.user_name,
 		        'twit_user_id': u.user_id,
 		        'access_token_key': u.access_token_key,

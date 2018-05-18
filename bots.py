@@ -12,13 +12,12 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 
 def search_tweets(access_token_key, access_token_secret, keywords):
     auth.set_access_token(access_token_key, access_token_secret)
-    api = API(auth)
+    api = tweepy.API(auth)
     tweets = api.search(q=keywords[0]) # just one keyword for now
     retweet = api.retweet(tweets[random.randint(0,15)].id)
 
 while True:
     users = db.query_active_users()
-    print(users)
     try:
         for user in users:
             search_tweets(user.get('access_token_key'), user.get('access_token_secret'), user.get('keywords'))
