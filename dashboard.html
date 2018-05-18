@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
+      <link rel="stylesheet" href="./styles/team.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="jquery.js"></script>
+  </head>
+  <body>
+    <div class="ui one column center aligned grid">
+      <div class="sixteen wide centered column">
+        <div class="ui huge inverted menu navbar">
+          <a class="item">JacksBot<a>
+          <div class="right menu">
+            <a href="" class="active item">Home</a>
+            <a href="" class="right item">Team</a>
+            <a href="" class="right item">Login</a>
+          </div>
+        </div>
+      </div>
+      <div class="eight wide centered column">
+        <h1 class="ui header" style="font-size: 50px; padding-top: 5%;">Welcome to the dashboard!</h1>
+      </div>
+      <div class="column">
+        <h2>Number of Retweets</h2>
+        <h1>XD</h1>
+      </div>
+      <p class="column" style="font-size: 20px;">Input the desired hashtag and click go</p>
+      <div class="one column center aligned row">
+        <div class=" four wide column">
+          <div class="ui form">
+            <input type="text" name="keyword" placeholder="hashtag">
+          </div>
+          <button class="ui button" style="margin-top: 20px; background-color: #66c7f4">Submit</button>
+        </div>
+        
+      </div>
+      <div class="center aligned column" style="padding-top: 5%;">
+        <p class="column" id="stopmsg">Would you like to give the bot a rest?</p>
+        <button class="ui red green button" id="stopbtn">Stop!</button>
+      </div>
+    </div>
+  </body>
+</html>
