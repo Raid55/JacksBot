@@ -6,6 +6,7 @@ Module for API for website majoidea.holberton.us
 from flask_oauth import OAuth
 from flask import Flask, request, jsonify, redirect, url_for, abort, session, g, flash, render_template, make_response
 from flask_oauth import OAuth
+from models import User, storage
 
 # configuration
 SECRET_KEY = 'development key'
@@ -26,8 +27,8 @@ twitter = oauth.remote_app('twitter',
     access_token_url='https://api.twitter.com/oauth/access_token',
     authorize_url='https://api.twitter.com/oauth/authenticate',
 
-    consumer_key='???',
-    consumer_secret='???'
+    consumer_key='WRi2oHuGFml3AHUH9J5FDCAws',
+    consumer_secret='fpLdAvU8PejMPWPkCyMrztj5npiQwNBq4q0pEsFwcGNT7OY8FN'
 )
  
 
@@ -40,30 +41,38 @@ def get_twitter_token(token=None):
 @app.route('/')
 def index():
     access_token = session.get('access_token')
-    print(access_token, "HERE")
     if access_token is None:
-        return redirect(url_for('login'))
-
-    access_token = access_token[0]
+        return redirect(url_for('dashboard'))
  
     return render_template('index.html')
  
 
 @app.route('/login')
 def login():
-    print(url_for('auth',
-        next=request.args.get('next') or request.referrer or None))
+    # print(url_for('auth',
+    #     next=request.args.get('next') or request.referrer or None))
     return twitter.authorize(callback=url_for('auth',
         next=request.args.get('next') or request.referrer or None))
 
 @app.route('/dashboard', methods=['GET'])
 def get_dashboard():
+    if session['access_token'] is None:
+         return redirect(url_for('index'))
     return render_template('dashboard.html')
 
-# @app.route('/dashboard', methods=['POST'])
-# def post_dashboard():
+@app.route('/dashboard', methods=['POST'])
+def post_dashboard():
+    if session['access_token'] is None:
+         return redirect(url_for('index'))
+
+    print(request.form)
+    return None
     # tmp = request.form["keywords"]
     # tmp = request.form["active"]
+
+@app.route('/team', methods=['GET'])
+def team():
+    return redner_template('team.html')
 
 @app.route('/logout')
 def logout():
@@ -79,8 +88,21 @@ def auth(res):
         flash('You denied the request to sign in.')
         return redirect(next_url)
 
-    print("res: ", res)
-    print("session: ", session)
+    newUser = User()
+    
+    setattr(newUser, "user_id", res['user_id'])
+    setattr(newUser, "access_token_key", res['oauth_token'])
+    setattr(newUser, "access_token_secret", res['oauth_token_secret'])
+    setattr(newUser, "user_name", res['screen_name'])
+    setattr(newUser, "keywords", "javascript|python|c")
+    setattr(newUser, "is_active", 1)
+    
+    try:
+        storage.add_user(newUser)
+    except Exception as e:
+        print(e)
+        print("user alredy exists or something...")
+
     access_token = res['oauth_token']
     session['access_token'] = access_token
     session['screen_name'] = res['screen_name']
@@ -90,7 +112,7 @@ def auth(res):
         res['oauth_token_secret']
     )
 
-    return redirect(url_for('index'))
+    return redirect(url_for('get_dashboard'))
 
 @app.errorhandler(404)
 def page_not_found(e):
