@@ -30,6 +30,7 @@ twitter = oauth.remote_app('twitter',
 
     consumer_key='WRi2oHuGFml3AHUH9J5FDCAws',
     consumer_secret='fpLdAvU8PejMPWPkCyMrztj5npiQwNBq4q0pEsFwcGNT7OY8FN'
+)
 
  
 
