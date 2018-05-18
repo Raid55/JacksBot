@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
+        <link rel="stylesheet" href="./styles/howto.css">
+    </head>
+    <body>
+        <div class="ui grid">
+            <div class="sixteen wide centered column">
+                <div class="ui huge inverted menu navbar">
+                    <a class="item">JacksBot<a>
+                    <div class="right menu">
+                        <a href="" class="active item">Home</a>
+                        <a href="" class="right item">Team</a>
+                        <a href="" class="right item">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup" onmouseover="vis()" onmouseleave="vis()"><span class="title">Instructions</span>
+            <span class="popuptext" id="instructions">To use JacksBot, type in the keywords you want to use to retweet, and click the "submit" button.</p><p>
+            You can see your current status with our service in your Dashboard screen.  To activate or deactivate our service, you may click on the "Activate/Deactivate" button to toggle the activation status of our service.
+            </span>
+        </div>
+
+
+        <footer>
+
+        <script>
+        function vis() {
+            var inst = document.getElementById("instructions");
+            inst.classList.toggle("show");
+        }
+        </script>
+
+
+        </footer>
+    </body>
+</html>
